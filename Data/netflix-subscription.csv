@@ -1,4 +1,4 @@
-Country_code,Country,Total Library Size,No. of TV Shows,No. of Movies,Cost Per Month - Basic ($),Cost Per Month - Standard ($),Cost Per Month - Premium ($)
+Country_Code,Country,Total_Library_Size,Num_TV_Shows,Num_Movies,Cost_Per_Month_Basic,Cost_Per_Month_Standard,Cost_Per_Month_Premium
 ar,Argentina,4760,3154,1606,3.74,6.3,9.26
 au,Australia,6114,4050,2064,7.84,12.12,16.39
 at,Austria,5640,3779,1861,9.03,14.67,20.32
