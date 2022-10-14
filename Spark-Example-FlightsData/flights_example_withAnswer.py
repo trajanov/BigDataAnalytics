@@ -1,11 +1,8 @@
 
-# https://s3.amazonaws.com/metcs777/flights.csv.bz2
-# s3n://metcs777/flights.csv.bz2
-# lines = sc.textFile("file:///home/kia/Data/Collected-Datasets/flight-delays/flight-delays/flights.csv")
+# https://storage.googleapis.com/met-cs-777-data/flights.csv.bz2\n",
+# https://storage.googleapis.com/met-cs-777-data/airports.csv"
 
-lines = sc.textFile("s3://metcs777/flights.csv.bz2")
-
-# lines = sc.textFile("/Users/kiat/datasets/flightData/flights.csv")
+lines = sc.textFile("gs://met-cs-777-data/flights.csv.bz2")
 
 # Removing the Header Line from CSV file 
 linesHeader = lines.first()
