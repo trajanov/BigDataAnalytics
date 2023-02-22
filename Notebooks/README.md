@@ -2,19 +2,19 @@
 
 [Python-LogisticRegression_CostFunctionParts_Example.ipynb](Python-LogisticRegression_CostFunctionParts_Example.ipynb): This Jupyter notebook contains an example implementation of logistic regression in Python, along with an explanation of the different parts of the cost function.
 
-[Python-Overfitting and Regularization.ipynb](Python-Overfitting and Regularization.ipynb): This Jupyter notebook covers the concepts of overfitting and regularization in machine learning, with examples and visualizations in Python.
+[Python-Overfitting and Regularization.ipynb](Python-Overfitting%20and%20Regularization.ipynb): This Jupyter notebook covers the concepts of overfitting and regularization in machine learning, with examples and visualizations in Python.
 
 [Spark-Example-01-Spark-Word-Count-Example.ipynb](Spark-Example-01-Spark-Word-Count-Example.ipynb): This Jupyter notebook provides a basic example of using Apache Spark to count the occurrences of words in a text file.
 
-[Spark-Example-02-RDD%20Basics.ipynb](Spark-Example-02-RDD%20Basics.ipynb): This Jupyter notebook covers the basics of working with Resilient Distributed Datasets (RDDs) in Apache Spark.
+[Spark-Example-02-RDD Basics.ipynb](Spark-Example-02-RDD%20Basics.ipynb): This Jupyter notebook covers the basics of working with Resilient Distributed Datasets (RDDs) in Apache Spark.
 
-[Spark-Example-03-RDD%20transformations.ipynb](Spark-Example-03-RDD%20transformations.ipynb): This Jupyter notebook contains examples of various transformations that can be applied to RDDs in Apache Spark.
+[Spark-Example-03-RDD transformations.ipynb](Spark-Example-03-RDD%20transformations.ipynb): This Jupyter notebook contains examples of various transformations that can be applied to RDDs in Apache Spark.
 
-[Spark-Example-04-Not%20to%20use%20transformations.ipynb](Spark-Example-04-Not%20to%20use%20transformations.ipynb): This Jupyter notebook explains some transformations in Apache Spark that can be computationally expensive and should be avoided.
+[Spark-Example-04-Not to use transformations.ipynb](Spark-Example-04-Not%20to%20use%20transformations.ipynb): This Jupyter notebook explains some transformations in Apache Spark that can be computationally expensive and should be avoided.
 
 [Spark-Example-05-Flight-dataset.ipynb](Spark-Example-05-Flight-dataset.ipynb): This Jupyter notebook provides an example of using Apache Spark to analyze flight data.
 
-[Spark-Example-06-Join%20Operation%20on%20RDD.ipynb](Spark-Example-06-Join%20Operation%20on%20RDD.ipynb): This Jupyter notebook provides examples of how to perform join operations on RDDs in Apache Spark.
+[Spark-Example-06-Join Operation on RDD.ipynb](Spark-Example-06-Join%20Operation%20on%20RDD.ipynb): This Jupyter notebook provides examples of how to perform join operations on RDDs in Apache Spark.
 
 [Spark-Example-07-RDD-Dataframe-Examples-Operations.ipynb](Spark-Example-07-RDD-Dataframe-Examples-Operations.ipynb): This Jupyter notebook provides examples of how to work with RDDs and DataFrames in Apache Spark.
 
@@ -26,7 +26,7 @@
 
 [Spark-Example-09.2-treeAggregate-Min-Max-Calculation.ipynb)](Spark-Example-09.2-treeAggregate-Min-Max-Calculation.ipynb)): This Jupyter notebook provides an example of using tree aggregation in Apache Spark to efficiently calculate the minimum and maximum values in a large dataset.
 
-[Spark-Example-09.3-PySpark%20and%20NumPy.ipynb](Spark-Example-09.3-PySpark%20and%20NumPy.ipynb): This Jupyter notebook contains examples of how to use NumPy arrays with PySpark in Apache Spark.
+[Spark-Example-09.3-PySpark and NumPy.ipynb](Spark-Example-09.3-PySpark%20and%20NumPy.ipynb): This Jupyter notebook contains examples of how to use NumPy arrays with PySpark in Apache Spark.
 
 [Spark-Example-10-DataFrames.ipynb](Spark-Example-10-DataFrames.ipynb): This Jupyter notebook introduces DataFrames in Apache Spark and provides examples of how to work with them.
 
@@ -46,7 +46,7 @@
 
 [Spark-Example-17-Simple-Linear-Regression-Implementation.ipynb](Spark-Example-17-Simple-Linear-Regression-Implementation.ipynb): This Jupyter notebook provides an example of implementing a simple linear regression in Apache Spark.
 
-[Spark-Example-18-Linear-Regression-Gradient%20Descent.ipynb](Spark-Example-18-Linear-Regression-Gradient%20Descent.ipynb): This Jupyter notebook provides an example of implementing linear regression with gradient descent in Apache Spark.
+[Spark-Example-18-Linear-Regression-Gradient Descent.ipynb](Spark-Example-18-Linear-Regression-Gradient%20Descent.ipynb): This Jupyter notebook provides an example of implementing linear regression with gradient descent in Apache Spark.
 
 [Spark-Example-19-Logistic-Regression.ipynb](Spark-Example-19-Logistic-Regression.ipynb): This Jupyter notebook provides an example of implementing logistic regression in Apache Spark.
 
@@ -56,11 +56,11 @@
 
 [Spark-Example-20b-Imbalanced-Classes.ipynb](Spark-Example-20b-Imbalanced-Classes.ipynb): This Jupyter notebook provides an example of how to handle imbalanced classes in machine learning using Apache Spark.
 
-[Spark-Example-21-Mllib-Regression%20copy.ipynb](Spark-Example-21-Mllib-Regression%20copy.ipynb): This Jupyter notebook provides examples of regression algorithms in Apache Spark's MLlib library.
+[Spark-Example-21-Mllib-Regression copy.ipynb](Spark-Example-21-Mllib-Regression%20copy.ipynb): This Jupyter notebook provides examples of regression algorithms in Apache Spark's MLlib library.
 
 [Spark-Example-22-Mllib-Clustering.ipynb](Spark-Example-22-Mllib-Clustering.ipynb): This Jupyter notebook provides examples of clustering algorithms in Apache Spark's MLlib library.
 
-[Spark-Example-23-Mllib-Sentiment%20Model.ipynb](Spark-Example-23-Mllib-Sentiment%20Model.ipynb): This Jupyter notebook provides an example of building a sentiment analysis model in Apache Spark's MLlib library.
+[Spark-Example-23-Mllib-Sentiment Model.ipynb](Spark-Example-23-Mllib-Sentiment%20Model.ipynb): This Jupyter notebook provides an example of building a sentiment analysis model in Apache Spark's MLlib library.
 
 [Spark-Example-24-Mlib-LDA.ipynb](Spark-Example-24-Mlib-LDA.ipynb): This Jupyter notebook provides an example of using Latent Dirichlet Allocation (LDA) for topic modeling in Apache Spark's MLlib library.
 
