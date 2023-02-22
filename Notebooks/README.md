@@ -4,7 +4,7 @@ Python-LogisticRegression_CostFunctionParts_Example.ipynb: This Jupyter notebook
 
 Python-Overfitting and Regularization.ipynb: This Jupyter notebook covers the concepts of overfitting and regularization in machine learning, with examples and visualizations in Python.
 
-Spark-Example-01-Spark-Word-Count-Example.ipynb: This Jupyter notebook provides a basic example of using Apache Spark to count the occurrences of words in a text file.
+[Spark-Example-01-Spark-Word-Count-Example.ipynb](Spark-Example-01-Spark-Word-Count-Example.ipynb): This Jupyter notebook provides a basic example of using Apache Spark to count the occurrences of words in a text file.
 
 Spark-Example-02-RDD Basics.ipynb: This Jupyter notebook covers the basics of working with Resilient Distributed Datasets (RDDs) in Apache Spark.
 
