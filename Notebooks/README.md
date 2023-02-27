@@ -1,5 +1,7 @@
 # Learning PySpark by examples
 
+*By: Dimitar Trajanov*
+
 Learning PySpark by examples can be an effective way to understand how PySpark works in practice and to gain hands-on experience with the tool. Here are a few reasons why learning PySpark by examples can be beneficial:
 
 1. Demonstrates real-world applications: Examples show how PySpark is used to solve real-world data processing challenges. This can help you understand how to apply PySpark to your own data analysis problems.
