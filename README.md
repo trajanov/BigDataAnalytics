@@ -18,8 +18,8 @@ This directory contains several examples of data analytics on well-known dataset
 [Python](Python):
 This directory contains machine learning algorithms implemented in Python. Students can use these algorithms as a starting point to learn about different machine learning models and techniques.
 
-[Spark-on-Colab](Spark-on-Colab):
-This directory contains Jupyter notebooks that demonstrate how to use Spark on Google Colab. 
+[Installations-HowTos](Installations-HowTos):
+This directory contains installation how-tos for various OS and Jupyter notebooks, demonstrating how to use Spark on Google Colab. 
 
 
 The MET CS 777 Big Data Analytics Code Repository is a valuable resource for anyone interested in learning about big data analytics using Spark and Python.
