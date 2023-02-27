@@ -1,6 +1,6 @@
 This directory contains several examples of data analytics on well-known datasets using Spark RDDs and DataFrames. The following datasets are included in this directory:
 
-- [FlightsData dataset](Spark-Example-FlightsData): This dataset contains flight details such as the departure and arrival time, flight duration, and flight distance. The examples in this directory show how to analyze this data using Spark RDDs and DataFrames.
+- [FlightsData dataset](Spark-Example-FlightsData): This dataset contains flight details such as departure and arrival time, flight duration, and flight distance. The examples in this directory show how to analyze this data using Spark RDDs and DataFrames.
 
 - [SocialMedia dataset](Spark-Example-Social-Media): This dataset contains social media data, such as Facebook posts and tweets. The examples in this directory show how to analyze this data using Spark RDDs and DataFrames.
 
