@@ -1,4 +1,5 @@
 ![Example image](./images/TPC-H-Schema.png) 
+<img src="./images/TPC-H-Schema.png.png" alt="Example image" width="500" height="300">
 
 The TPC-H benchmark includes the following tables:
 
