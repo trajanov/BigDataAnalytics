@@ -12,4 +12,5 @@ The TPC Benchmark™H (TPC-H) consists of a set of tables that are commonly used
 These tables are designed to simulate a typical decision support system scenario, where data is stored and queried for complex analytical tasks. They provide a standardized and representative dataset for evaluating the performance and scalability of database systems.
 
 The Schema of the TPC-H tables is shown below:
+
 <img src="./images/TPC-H-Schema.png" alt="TCP-H Schema" width="600">
