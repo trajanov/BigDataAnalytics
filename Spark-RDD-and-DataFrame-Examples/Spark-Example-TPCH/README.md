@@ -1,6 +1,4 @@
-![Example image](./images/TPC-H-Schema.png) 
-<img src="./images/TPC-H-Schema.png" alt="Example image" width="500" height="300">
-
+<img src="./images/TPC-H-Schema.png" alt="TCP-H Schema" width="600">
 The TPC-H benchmark includes the following tables:
 
 1. **Customer** : Contains information about customers, including their names, addresses, phone numbers, and demographic data.
