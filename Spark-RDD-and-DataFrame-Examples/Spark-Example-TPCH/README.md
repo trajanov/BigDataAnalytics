@@ -1,4 +1,3 @@
-<img src="./images/TPC-H-Schema.png" alt="TCP-H Schema" width="600">
 The TPC-H benchmark includes the following tables:
 
 1. **Customer** : Contains information about customers, including their names, addresses, phone numbers, and demographic data.
@@ -9,3 +8,5 @@ The TPC-H benchmark includes the following tables:
 6. **Partsupp** : Represents the relationship between parts and suppliers, indicating which suppliers provide which parts. It includes information such as availability, price, and other part-supplier details.
 7. **Nation** : Contains information about nations, including nation keys, names, regions, and other nation-related attributes.
 8. **Region** : Stores information about regions, including region keys and names.
+
+<img src="./images/TPC-H-Schema.png" alt="TCP-H Schema" width="600">
