@@ -102,3 +102,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+Notebooks/Spark-Example-18a.ipynb
