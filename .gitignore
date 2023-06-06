@@ -1,5 +1,7 @@
 /Notebooks/assesments/
 /Notebooks/working/
+/Notebooks/Spark-Example-19b-SVM.ipynb
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -104,6 +106,3 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-Notebooks/Spark-Example-18a.ipynb
-Notebooks/Spark-Example-19a-Logistic-Regression.ipynb
-Notebooks/Spark-Example-19a-Logistic-Regression.ipynb
