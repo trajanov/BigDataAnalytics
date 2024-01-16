@@ -1,22 +1,21 @@
 
 # Step-1 - Setup Java JDK
 
-Install java JDK on your machine 
+Install java JDK on your machine (https://www.oracle.com/java/technologies/downloads/#jdk21-mac)
 
 
 java -version
 
-java version "1.8.0_211"
-Java(TM) SE Runtime Environment (build 1.8.0_211-b12)
-Java HotSpot(TM) 64-Bit Server VM (build 25.211-b12, mixed mode)
-
+java version "21.0.1" 2023-10-17 LTS
+Java(TM) SE Runtime Environment (build 21.0.1+12-LTS-29)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.1+12-LTS-29, mixed mode, sharing)
 
 and setup 
 
 JAVA_HOME variable to the main folder where you have installed your java 
 
 ```
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8
+export JAVA_HOME=`/usr/libexec/java_home -v 21`
 ```
 
 
@@ -31,20 +30,20 @@ http://spark.apache.org/downloads.html
 
 Direct link is for example following 
 
-http://mirror.metrocast.net/apache/spark/spark-3.0.0/spark-3.0.0-bin-hadoop2.7.tgz
+https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz
 
 You can run the following command to download: 
 
-```wget http://mirror.metrocast.net/apache/spark/spark-3.0.0/spark-3.0.0-bin-hadoop2.7.tgz```
+```wget https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz```
 
 
 Uncompress it 
 
-```tar xvfz spark-3.0.0-bin-hadoop2.7.tgz```
+```tar xvfz spark-3.5.0-bin-hadoop3.tgz```
 
 I have my spark on the following folder 
 
-```/Users/kiat/spark-3.0.0-bin-hadoop2.7```
+```/Users/sandeep/spark-3.5.0-bin-hadoop3```
 
 # Step-3 -  Setup Enviroment Variables. 
 
@@ -52,7 +51,7 @@ Edit the bash_profile file and set some Environment variables
 
 ```nano .bash_profile```
 
-**Note:** For maxOS Catalina user, you need to edit the zshrc file and set the below enviroment variables to the end of your file 
+**Note:** For maxOS Catalina and above users, you need to edit the zshrc file and set the below enviroment variables to the end of your file 
 
 Also, if your zsh shell could not find the jupyter notebook command, here is the link to solve this problem
 
@@ -60,13 +59,13 @@ https://medium.com/@sumitmenon/how-to-get-anaconda-to-work-with-oh-my-zsh-on-mac
 
 ```nano .zshrc```
 
-```export SPARK_HOME=/Users/kiat/spark-3.0.0-bin-hadoop2.7```
+```export SPARK_HOME=/Users/sandeep/spark-3.5.0-bin-hadoop3```
 
 ```export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH```
 
 Set it to the path where you have your python3 
 
-```export PYSPARK_PYTHON=/Users/kiat/anaconda3/bin/python3```
+```export PYSPARK_PYTHON=/Users/sandeep/anaconda3/bin/python3```
 
 Add Spark bin and sbin folder to the PATH 
 
