@@ -69,7 +69,7 @@ You can use the following options:
 * Choose a package type: Pre-built for Hadoop 2.7<br/>
 *Please note that Spark and Hadoop are regularly updated & therefore the actual versions will differ*
 
-Create a folder 'spark' in 'C:\ProgramData' and move 'spark-2.4.4-bin-hadoop2.7.tgz' from your downloads folder to this directory.
+Create a folder 'spark' in 'C:\ProgramData' 'C:\Program Files\spark', or merely C drive(C:\spark), and then move 'spark-2.4.4-bin-hadoop2.7.tgz' from your downloads folder to this directory. Note: 'ProgramData' folder is a hidden directory in Windows 11 as of Setember 2024.
 Now uncompress the file using 7zip, so that you have the following directory structure:
 ```
  Directory of C:\ProgramData\spark\spark-2.4.4-bin-hadoop2.7
