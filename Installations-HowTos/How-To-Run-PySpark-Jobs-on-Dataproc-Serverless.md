@@ -54,6 +54,11 @@ gcloud dataproc clusters create cs777-assignment-1-phs \
 
 The command will wait at this line "Waiting for cluster creation operation...⠛" until the cluster is created.
 
+Once the PHS cluster is successfuly created, it will show up on the Dataproc cluster page on the Google Cloud console.
+
+![PHS Cluster Page](sceenshots/dataproc_serverless_phs_cluster_ui.jpg?raw=true "PHS Cluster Page")
+
+
 ### Command to Submit PySpark Jobs to Dataproc Serverless
 
 Now that you have successfully created a PHS cluster, it’s time to submit a PySpark job to Dataproc Serverless. Execute the following command, replacing the arguments with those specific to your Google Cloud environment. Ensure that all prerequisites are met before proceeding.
@@ -88,14 +93,14 @@ Go to "Dataproc > Serverless > Batches" in the Google Cloud console. Your Spark 
 
 Click on the BatchID link, which will take you to the Dataproc Serverless overview page of your Spakr job, including the job output. It will look similar to this screenshot.
 
-![Dataproc Serverless Job Overview](https://raw.githubusercontent.com/kiat/BigDataAnalytics/master/Installations-HowTos/sceenshots/dataproc_serverless_job_overview.jpg "Dataproc Serverless Job Overview")
+![Dataproc Serverless Job Overview](sceenshots/dataproc_serverless_job_overview.jpg?raw=true "Dataproc Serverless Job Overview")
 
 ### Deleting Dataproc Serverless Job
 Dataproc Serverless will automatically terminate your Spark job once it's finished and destroy the infrastructure resources that it has provsioned to run it.
 
 But If you need to stop your Dataproc Serverless Job (Batch) prematurely for some reason, you can do so via the Google Cloud console by selecting your Batch and clicking on the delete button. 
 
-![PHS Cluster](https://raw.githubusercontent.com/kiat/BigDataAnalytics/master/Installations-HowTos/sceenshots/dataproc_serverless_delete_batch.jpg "PHS Cluster")
+![PHS Cluster](sceenshots/dataproc_serverless_delete_batch.jpg?raw=true "PHS Cluster")
 
 
 Alternatively, you can use the following command. Replace the BatchID ("36e754a79e224d3286c8dbc941d74153") with the ID of your Dataproc Serverless batch and other arguments with values specific to your Google Cloud project.
@@ -117,11 +122,11 @@ At this time, the Spark job progress is being written into the GCS bucket by the
 - Click on the "Spark History Server" link
 
 
-![PHS Cluster](https://raw.githubusercontent.com/kiat/BigDataAnalytics/master/Installations-HowTos/sceenshots/dataproc_serverless_phs_cluster.jpg "PHS Cluster")
+![PHS Cluster](sceenshots/dataproc_serverless_phs_cluster.jpg?raw=true "PHS Cluster")
 
 To see your Spark job on the UI, click on the "Show incomplete applications" link and use your prior knowledge of the Spark UI to monitor your job.
 
-![Spark History Server UI](https://raw.githubusercontent.com/kiat/BigDataAnalytics/master/Installations-HowTos/sceenshots/dataproc_serverless_spark_history_ui.jpg "Spark History Server UI")
+![Spark History Server UI](sceenshots/dataproc_serverless_spark_history_ui.jpg?raw=true "Spark History Server UI")
 
 
 Congratulations!! You've successfully used Dataproc Serverless to run yout Spark job!
