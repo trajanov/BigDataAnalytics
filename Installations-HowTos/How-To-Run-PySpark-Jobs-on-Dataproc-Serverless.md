@@ -1,3 +1,7 @@
+# Author
+- **Name:** Pankaj Yawale
+- **Date:** October 2024
+
 # How to Run PySpark Jobs on Dataproc Serverless
 
 In this tutorial, you will learn how to run PySpark jobs on Dataproc Serverless, eliminating the need to preprovision a Dataproc cluster.
@@ -70,7 +74,7 @@ Now that you have successfully created a PHS cluster, it’s time to submit a Py
 Substitute the following arguments with values specific to your Google Cloud environment.
 - --project
 - --region
-- --history-server-cluster with the fully qualified name of your PHS cluster. The fully qualified cluster name in the following command is provided as "projects/met-cs-777-434703/regions/us-east1/clusters/cs777-assignment-1-phs" where "met-cs-777-434703" is the project name, "us-east1" is the region, "cs777-assignment-1-phs" is thw PHS cluster name you had given in the previous command.
+- --history-server-cluster with the fully qualified name of your PHS cluster. The fully qualified cluster name in the following command is provided as "projects/met-cs-777-434703/regions/us-east1/clusters/cs777-assignment-1-phs" where "met-cs-777-434703" is the project name, "us-east1" is the region, "cs777-assignment-1-phs" is the PHS cluster name you had given in the previous command.
 - PySpark file path in GCS which is provided as "gs://met-cs777-assignment1/Yawale_Pankaj_Assignment_5.py" in this command.
 - --properties which takes Spark driver and executor related settings that are desired in your case. You can use this option to override the default setting provided by Dataproc Serverless. If you keep the same settings as in the command below, your Spark job will run with 5 executors with 4 cores each and 4 cores for the driver. Memory is managed by Dataproc Serverless.
 - spark.app.name with the name that you would like to give to your Spark job
@@ -129,7 +133,7 @@ To see your Spark job on the UI, click on the "Show incomplete applications" lin
 ![Spark History Server UI](sceenshots/dataproc_serverless_spark_history_ui.jpg?raw=true "Spark History Server UI")
 
 
-Congratulations!! You've successfully used Dataproc Serverless to run yout Spark job!
+Congratulations!! You've successfully used Dataproc Serverless to run your Spark job!
 
 # Clean Up
 
