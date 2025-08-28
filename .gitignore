@@ -1,5 +1,6 @@
 /Notebooks/assesments/
 /Notebooks/working/
+/Notebooks/Spark-Example-Steaming/input_files
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -11,6 +12,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+.conda/
 build/
 develop-eggs/
 dist/

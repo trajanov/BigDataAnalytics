@@ -8,7 +8,7 @@ spark = SparkSession \
     .config("spark.sql.adaptive.enabled", "false") \
     .config("spark.sql.shuffle.partitions", 8)\
     .getOrCreate()
-    
+
 # Create DataFrame representing the stream of input lines from connection to localhost:9999
 lines = spark \
     .readStream \
@@ -18,19 +18,15 @@ lines = spark \
     .load()
 
 # Split the lines into words
-words = lines.select(
-   explode(
-       split(lines.value, " ")
-   ).alias("word")
-)
+words = lines.select(explode(split(lines.value, " ")).alias("word"))
 
 # Generate running word count
 wordCounts = words.groupBy("word").count()
-#wordCounts = words
- # Start running the query that prints the running counts to the console
+
+# Start running the query that prints the running counts to the console
 query = wordCounts \
     .writeStream \
-    .outputMode("append") \
+    .outputMode("complete") \
     .format("console") \
     .start()
 

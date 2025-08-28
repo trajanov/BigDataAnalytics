@@ -1,25 +1,30 @@
-# The MET CS 777 Big Data Analytics Code Repository
-The MET CS 777 Big Data Analytics Code Repository is a collection of code examples and notebooks designed to aid students in learning big data analytics. The repository contains several directories, each with its own focus.
+# MET CS 777 Big Data Analytics Code Repository
 
-[Notebooks](Notebooks):
-This directory contains Jupyter notebooks that illustrate the basic usage of Spark and examples presented during lectures. The notebooks can be used as a guide to learn how to use Spark and its different components.
+This repository is a comprehensive collection of code examples, Jupyter notebooks, and tutorials designed to support students and practitioners in learning big data analytics, with a focus on Apache Spark and Python. Below is a detailed description of each folder and its contents:
 
-[Spark-RDD-and-DataFrame-Examples](Spark-RDD-and-DataFrame-Examples):
-This directory contains several examples of data analytics on well-known datasets using Spark RDDs and DataFrames. The following datasets are included in this directory:
+## Folder Structure and Contents
 
-- FlightsData dataset: This dataset contains flight details such as the departure and arrival time, flight duration, and flight distance. The examples in this directory show how to analyze this data using Spark RDDs and DataFrames.
+### [Notebooks/ (the main folder)](Notebooks)
+Contains a wide range of Jupyter notebooks illustrating the use of PySpark for data processing, machine learning, and advanced analytics. Notebooks range from basic RDD/DataFrame operations to advanced MLlib and Spark NLP examples. Subfolders include:
 
-- SocialMedia dataset: This dataset contains social media data, such as Facebook posts and tweets. The examples in this directory show how to analyze this data using Spark RDDs and DataFrames.
+### [Spark-RDD-and-DataFrame-Examples/](Spark-RDD-and-DataFrame-Examples)
+Contains practical examples of data analytics on well-known datasets using Spark RDDs and DataFrames. Subfolders include:
+- **Spark-Example-FlightsData/**: Analysis of flight data, including scripts and notebooks for exploring flight details, delays, and airport statistics.
+- **Spark-Example-Social-Media/**: Examples and notebooks for analyzing social media datasets (e.g., Facebook posts, tweets).
+- **Spark-Example-TPCH/**: Benchmarks and analytics on the TPC-H dataset, including schema explanations and example queries.
+- **Spark-Example-Word-Count/**: Classic word count examples using Spark, with scripts and sample data.
 
-- TPCH dataset: This is a benchmark dataset that is used to test the performance of database systems. The examples in this directory show how to analyze this data using Spark RDDs and DataFrames.
+### [Python_examples/](Python_examples)
+Contains Python scripts and notebooks implementing machine learning algorithms and statistical methods. 
 
-- Word-Count examples: This is a classic example used to demonstrate the capabilities of Spark. The examples in this directory show how to count the number of occurrences of words in a given text file using Spark RDDs and DataFrames.
+### [Installations-HowTos/](Installations-HowTos)
+Step-by-step guides and tutorials for installing and configuring tools required for big data analytics, including:
+- How to install Apache Spark on Windows and MacOS.
+- How to install Git and Java JDK.
+- How to set up and use AWS EMR clusters and Google Cloud Dataproc.
+- How to run Jupyter and PySpark on Google Colab and cloud platforms.
+- Screenshots and markdown guides for various installation and setup tasks.
 
-[Python](Python):
-This directory contains machine learning algorithms implemented in Python. Students can use these algorithms as a starting point to learn about different machine learning models and techniques.
+---
 
-[Installations-HowTos](Installations-HowTos):
-This directory contains installation how-tos for various OS and Jupyter notebooks, demonstrating how to use Spark on Google Colab. 
-
-
-The MET CS 777 Big Data Analytics Code Repository is a valuable resource for anyone interested in learning about big data analytics using Spark and Python.
+This repository is a valuable resource for anyone interested in learning about big data analytics using Spark and Python, providing both foundational and advanced materials for hands-on practice and experimentation.

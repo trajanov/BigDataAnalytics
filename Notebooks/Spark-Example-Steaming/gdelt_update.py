@@ -62,10 +62,13 @@ def unzip_file(zip_path, extract_to):
         with zipfile.ZipFile(zip_path, 'r') as zip_ref:
             zip_ref.extractall(extract_to)
         print("Unzipped file to", extract_to)
+        # remove the zip file after extraction
+        os.remove(zip_path)
     except zipfile.BadZipFile as e:
         print("Error unzipping the file:", e)
 
 if __name__ == "__main__":
     while True:
         check_and_download_file()
+        print("Waiting 300 seconds for the next check...")
         time.sleep(300)  # Wait for 5 minutes before checking again

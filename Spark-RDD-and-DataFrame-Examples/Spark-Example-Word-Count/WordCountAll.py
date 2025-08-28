@@ -1,14 +1,18 @@
 from __future__ import print_function
 import sys
 from operator import add
-from pyspark import SparkContext
+from pyspark import SparkContext, SparkConf
+import os, sys
+
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: wordcount <file> <output> ", file=sys.stderr)
         exit(-1)
+    sc = SparkContext()
 
-    sc = SparkContext(appName="PythonWordCount")
+    # sc = SparkContext(appName="PythonWordCount")
     lines = sc.textFile(sys.argv[1])
 
     counts = lines.flatMap(lambda x: x.split(' ')).map(lambda x: (x, 1)).reduceByKey(add)

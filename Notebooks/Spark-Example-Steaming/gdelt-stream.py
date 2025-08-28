@@ -4,8 +4,15 @@
 # The dataset is available at http://data.gdeltproject.org/gdeltv2/lastupdate.txt
 
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, avg, desc, count
+from pyspark.sql.functions import col, avg, desc, count, sum
 from pyspark.sql.types import StructType, StructField, StringType, TimestampType
+
+# set  WARN level to ERROR to avoid excessive logging
+import logging
+logging.getLogger("py4j").setLevel(logging.ERROR)
+# set WARN level to ERROR to avoid excessive logging
+logging.getLogger("pyspark").setLevel(logging.ERROR)
+# set WARN level to ERROR to avoid excessive logging
 
 # Initialize Spark session
 
@@ -95,7 +102,7 @@ df = spark.readStream \
 df = df.withColumn("GoldsteinScale", col("GoldsteinScale").cast("float"))
 
 # Load country code mapping file
-country_mapping_path = "country_mapping.csv"  # Path to country mapping CSV file
+country_mapping_path = "CAMEO.country.txt"  # Path to country mapping CSV file
 country_schema = StructType([
     StructField("CountryCode", StringType(), True),
     StructField("CountryName", StringType(), True)
@@ -103,6 +110,7 @@ country_schema = StructType([
 
 country_mapping_df = spark.read \
     .option("header", "true") \
+    .option("delimiter", "\t") \
     .schema(country_schema) \
     .csv(country_mapping_path)
 
@@ -113,15 +121,15 @@ joined_df = df.join(country_mapping_df, df.Actor1CountryCode == country_mapping_
 country_goldstein_df = joined_df.groupBy("CountryName") \
     .agg(
         avg("GoldsteinScale").alias("AverageGoldsteinScale"),
-        count("GLOBALEVENTID").alias("NumberOfEvents")
+        count("GLOBALEVENTID").alias("NumberOfEvents"),
     )
-# add sum of NumMentions
-country_goldstein_df = country_goldstein_df.withColumn("SumNumMentions", col("NumberOfEvents")*col("NumMentions"))
 
 # Get the top 10 most positive and 10 most negative countries
 most_positive_countries = country_goldstein_df.orderBy(desc("AverageGoldsteinScale")).limit(10)
 most_negative_countries = country_goldstein_df.orderBy("AverageGoldsteinScale").limit(10)
 
+# top 10 countries with the highest number of events
+most_events_countries = country_goldstein_df.orderBy(desc("NumberOfEvents")).limit(10)
 
 # Write the results to the console in real-time
 query_positive = most_positive_countries.writeStream \
@@ -137,5 +145,12 @@ query_negative = most_negative_countries.writeStream \
     .start()
     #.option("checkpointLocation", "checkpoint") \
 
+query_events = most_events_countries.writeStream \
+    .outputMode("complete") \
+    .format("console") \
+    .option("truncate", "false") \
+    .start()
+    
 query_positive.awaitTermination()
 query_negative.awaitTermination()
+query_events.awaitTermination()
