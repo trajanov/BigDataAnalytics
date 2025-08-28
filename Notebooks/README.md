@@ -2,11 +2,11 @@
 
 *By: Dimitar Trajanov*
 
-Learning PySpark by examples can be an effective way to understand how PySpark works in practice and to gain hands-on experience with the tool. Here are a few reasons why learning PySpark by examples can be beneficial:
+Learning PySpark by example can be an effective way to understand how PySpark works in practice and to gain hands-on experience with the tool. Here are a few reasons why learning PySpark by examples can be beneficial:
 
 1. Demonstrates real-world applications: Examples show how PySpark is used to solve real-world data processing challenges. This can help you understand how to apply PySpark to your own data analysis problems.
 2. Provides practical experience: Working through examples can help you gain practical experience with PySpark. By experimenting with PySpark code, you can better understand how to use PySpark functions, manipulate data, and build data pipelines.
-3. Improves problem-solving skills: Examples can also help you develop your problem-solving skills. As you work through examples, you will encounter errors and challenges that you will need to solve. This can help you develop your critical thinking skills and learn how to debug PySpark code.
+3. Improves problem-solving skills: Example can also help you develop your problem-solving skills. As you work through examples, you will encounter errors and challenges that you will need to solve. This can help you develop your critical thinking skills and learn how to debug PySpark code.
 4. Learning PySpark by examples can also be a fun and engaging way to learn. Examples can help make learning more interactive and hands-on, which can be more enjoyable than reading through documentation or tutorials.
 
 In this repository, you can find examples for PySpark that range from the basics all the way up to advanced machine learning algorithms, including those using MLLib. These examples provide a comprehensive overview of PySpark's capabilities, from simple data processing tasks to more complex use cases involving advanced machine learning techniques. Whether you are just starting out with PySpark or are already experienced with the tool, you can find examples that will help you build your skills and develop your understanding of how to use PySpark to solve real-world data problems.
