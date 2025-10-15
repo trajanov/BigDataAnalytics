@@ -74,10 +74,6 @@ weekEndFlights.count()
 # For each carrier, for which state do they have the largest average delay? 
 # You will need the airline and airport data sets for this question. 
 
-# AirLine dataset https://s3.amazonaws.com/metcs777/airlines.csv or s3://metcs777/airlines.csv
-# Airport dataset https://s3.amazonaws.com/metcs777/airports.csv or s3://metcs777/airports.csv 
-
-
 
 
 # add your own questions. 
