@@ -108,3 +108,9 @@ venv.bak/
 # mypy
 .mypy_cache/
 .vscode/settings.json
+
+# Course-Update-2026: large datasets are not versioned
+/Course-Update-2026/data/gdelt/
+/Course-Update-2026/data/taxi-stream/
+/Course-Update-2026/data/taxi-data-sorted-small.csv.bz2
+/Course-Update-2026/gcp/

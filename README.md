@@ -4,6 +4,9 @@ This repository is a comprehensive collection of code examples, Jupyter notebook
 
 ## Folder Structure and Contents
 
+### [Course-Update-2026/](Course-Update-2026)
+Code library for the 2026 course revision, tested against PySpark 4.2. Notebooks and scripts are numbered by lecture-notes chapter (`CC.NN Title`), plus serverless Spark submission scripts and the small sample datasets. See the folder's README for what is included and which large datasets are not.
+
 ### [Notebooks/ (the main folder)](Notebooks)
 Contains a wide range of Jupyter notebooks illustrating the use of PySpark for data processing, machine learning, and advanced analytics. Notebooks range from basic RDD/DataFrame operations to advanced MLlib and Spark NLP examples. Subfolders include:
 
