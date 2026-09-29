@@ -1,0 +1,75 @@
+# CS-777 Chapter 9 — a single-broker Apache Kafka for the weather-sensor example.
+#
+#   docker compose -f "code/scripts/kafka/docker-compose.yml" up -d
+#   docker compose -f "code/scripts/kafka/docker-compose.yml" down -v
+#
+# Kafka runs in KRaft mode, so there is no ZooKeeper container here. One server
+# carries both roles, `process.roles=broker,controller`, which is the combined
+# mode the chapter describes for development deployments. A production cluster
+# would dedicate three or five servers to the controller role.
+#
+# Kafka UI is a browser view of the same cluster at http://localhost:8080 —
+# topics, partitions, consumer groups and the messages themselves. It is there
+# so the abstractions in the chapter can be watched rather than only read.
+
+services:
+  kafka:
+    image: apache/kafka:4.1.0
+    container_name: cs777-kafka
+    ports:
+      - "9092:9092"          # what a client on the host connects to
+    environment:
+      # --- KRaft identity: one node, both roles, its own quorum -------------
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      CLUSTER_ID: cs777-streaming-chapter
+
+      # --- Listeners --------------------------------------------------------
+      # INTERNAL is how containers reach the broker, EXTERNAL is how the host
+      # does. Two listeners are needed because the advertised host name has to
+      # be right from both sides: `kafka` inside the compose network,
+      # `localhost` from your laptop.
+      KAFKA_LISTENERS: INTERNAL://0.0.0.0:19092,CONTROLLER://0.0.0.0:9093,EXTERNAL://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:19092,EXTERNAL://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+
+      # --- Where the log lives ---------------------------------------------
+      # The image defaults to /tmp, which a restart would throw away. Pointing
+      # it at the declared volume below is what makes a topic survive a stop.
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+
+      # --- One broker, so every replication factor is 1 ---------------------
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      # Three partitions on an auto-created topic, so the parallelism ceiling
+      # the chapter describes is visible in Kafka UI.
+      KAFKA_NUM_PARTITIONS: 3
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092 >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 10s
+      retries: 20
+
+  kafka-ui:
+    image: kafbat/kafka-ui:latest
+    container_name: cs777-kafka-ui
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: cs777
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:19092
+      DYNAMIC_CONFIG_ENABLED: "true"
+    depends_on:
+      kafka:
+        condition: service_healthy
+
+volumes:
+  # Named, so `stop.sh` keeps the topics and `stop.sh --purge` discards them.
+  kafka-data:

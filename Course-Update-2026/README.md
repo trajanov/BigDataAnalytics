@@ -30,19 +30,29 @@ figures the notebooks embed.
 Scripts meant to be submitted to a serverless Spark service rather than run in a notebook.
 See the folder's own README for the submission commands.
 
+### [`scripts/`](scripts)
+Programs that run for a long time or in several terminals at once, so they do not fit a
+notebook: `05.02` prints the effective Spark configuration, and the Chapter 9 streaming
+examples cover Kafka (`09.01`, with `kafka/` for a one-broker Docker cluster), a socket
+word count (`09.02`), and the live GDELT pipeline — the feeder that downloads each new
+export (`09.03`), the Structured Streaming query (`09.04`), a Flask dashboard over its
+results (`09.05`), and `09.06 Run GDELT Demo.sh`, which starts all three on macOS.
+See the folder's own README for how to run them.
+
 ### [`data/`](data)
 Only the small inputs are versioned here:
 
 | File | Size | Used by |
 |------|------|---------|
 | `advertising.csv` | 4 KB | regression examples |
+| `gdelt/CAMEO.country.txt` | 4 KB | 09.04, the GDELT country lookup |
 | `bike-sharing.csv` | 1.1 MB | 07.01, 07.05 |
 | `netflix-subscription.csv` | 4 KB | 07.03, 07.09, 10.04 |
 | `Alices-Adventures-in-Wonderland-by-Lewis-Carroll.txt.bz2` | 52 KB | word count |
 | `taxi-data-sorted-verysmall.csv` | 1.8 MB | taxi examples |
 | `taxi-data-sorted-verysmall-header.csv` | 1.8 MB | taxi examples |
 
-The large datasets — the GDELT event tables (`data/gdelt/`, up to 4.7 GB),
+The large datasets — the GDELT event tables (the rest of `data/gdelt/`, up to 4.7 GB),
 `taxi-data-sorted-small.csv.bz2` (93 MB), and `IMDB Dataset.csv.bz2` (18 MB, used by
 07.06–07.08) — are **not** in this repository; they are too large
 to version here. Notebooks that reference them expect the files under a local
